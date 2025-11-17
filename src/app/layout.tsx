@@ -16,6 +16,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { AdSenseScript } from "@/components/global/google/adSense-script";
 
 const poppins = Poppins({
   weight: ["200", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -33,11 +34,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const adSenseId = process.env.NEXT_PUBLIC_ADSENSE_PID || '';
+
+
   return (
     <html lang="pt-BR">
       <body
         className={`${poppins.className} dark antialiased scrollbar-custom`}
       >
+        {adSenseId && <AdSenseScript pId={adSenseId} />}
         <SidebarProvider>
           <AppSidebar />
           <SidebarInset>
