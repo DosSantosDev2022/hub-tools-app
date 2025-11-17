@@ -37,7 +37,7 @@ export const data = {
       items: [
         {
           title: "Comprimir PDF",
-          url: "#",
+          url: "/tools/Compress-pdf",
           isDisabled: true,
         },
         {
@@ -103,7 +103,7 @@ export const data = {
       items: [
         {
           title: "Gerador de QR Code",
-          url: "#",
+          url: "/tools/qr-code-generator",
           isDisabled: true,
         },
         {
