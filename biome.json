@@ -18,7 +18,11 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "style": {
+        "useImportType":"off"
+      },
       "suspicious": {
+        "noArrayIndexKey":"off",
         "noUnknownAtRules": "off"
       }
     },
@@ -30,7 +34,7 @@
   "assist": {
     "actions": {
       "source": {
-        "organizeImports": "on"
+        "organizeImports": "off"
       }
     }
   }
