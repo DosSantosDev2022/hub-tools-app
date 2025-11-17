@@ -1,113 +1,108 @@
-import { GalleryVerticalEnd, AudioWaveform, Command, SquareTerminal, Bot, BookOpen, Settings2, Frame, PieChart } from "lucide-react";
+import { 
+  FileText, 
+  Image as ImageIcon, 
+  Calculator, 
+  Palette, 
+  Wrench,
+} from "lucide-react";
 
 export const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
-  teams: [
-    {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
   navMain: [
     {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      title: "Financeiro",
+      url: "/tools/finance",
+      icon: Calculator,
+      isActive: true, // Deixa esta aba aberta por padrão já que acabamos de criar o conversor
       items: [
         {
-          title: "History",
+          title: "Conversor de Moedas",
+          url: "/tools/currency-converter",
+        },
+        {
+          title: "Calculadora de Juros", // Ideia para o futuro
           url: "#",
         },
         {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
+          title: "Salário Líquido", // Ideia para o futuro
           url: "#",
         },
       ],
     },
     {
-      title: "Models",
-      url: "#",
-      icon: Bot,
+      title: "Documentos & PDF",
+      url: "/tools/pdf",
+      icon: FileText,
       items: [
         {
-          title: "Genesis",
+          title: "Comprimir PDF",
           url: "#",
         },
         {
-          title: "Explorer",
+          title: "PDF para Word",
           url: "#",
         },
         {
-          title: "Quantum",
+          title: "Unir PDFs (Merge)",
           url: "#",
         },
       ],
     },
     {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
+      title: "Imagens",
+      url: "/tools/images",
+      icon: ImageIcon,
       items: [
         {
-          title: "Introduction",
+          title: "Converter para JPG/PNG",
           url: "#",
         },
         {
-          title: "Get Started",
+          title: "Comprimir Imagem",
           url: "#",
         },
         {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
+          title: "Redimensionar",
           url: "#",
         },
       ],
     },
     {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
+      title: "Design & Cores",
+      url: "/tools/design",
+      icon: Palette,
       items: [
         {
-          title: "General",
+          title: "Gerador de Paletas",
           url: "#",
         },
         {
-          title: "Team",
+          title: "Contrast Checker",
           url: "#",
         },
         {
-          title: "Billing",
+          title: "Gradientes CSS",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Utilitários",
+      url: "/tools/utils",
+      icon: Wrench,
+      items: [
+        {
+          title: "Gerador de QR Code",
           url: "#",
         },
         {
-          title: "Limits",
+          title: "Gerador de Senhas",
+          url: "#",
+        },
+        {
+          title: "Contador de Caracteres",
           url: "#",
         },
       ],
     },
   ],
-}
+};
