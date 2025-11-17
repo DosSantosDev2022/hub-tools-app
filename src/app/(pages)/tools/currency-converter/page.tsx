@@ -60,7 +60,7 @@ export default function ToolsPage() {
 
         <div className="w-full max-w-[728px]">
           <AdBanner
-            dataAdSlot="1234567890"
+            dataAdSlot="1597748894"
             dataAdFormat="auto"
             dataFullWidthResponsive={true}
           />

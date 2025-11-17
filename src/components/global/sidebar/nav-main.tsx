@@ -1,6 +1,7 @@
 "use client"
 
 import { ChevronRight, type LucideIcon } from "lucide-react"
+import Link from "next/link" // 💡 Adicionamos Link do Next.js para navegação real
 
 import {
   Collapsible,
@@ -18,19 +19,24 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 
+type SubItem = {
+  title: string
+  url: string
+  isDisabled?: boolean
+}
+
+type MainItem = {
+  title: string
+  url: string
+  icon?: LucideIcon
+  isActive?: boolean
+  items?: SubItem[]
+}
+
 export function NavMain({
   items,
 }: {
-  items: {
-    title: string
-    url: string
-    icon?: LucideIcon
-    isActive?: boolean
-    items?: {
-      title: string
-      url: string
-    }[]
-  }[]
+  items: MainItem[]
 }) {
   return (
     <SidebarGroup>
@@ -53,15 +59,29 @@ export function NavMain({
               </CollapsibleTrigger>
               <CollapsibleContent>
                 <SidebarMenuSub>
-                  {item.items?.map((subItem) => (
-                    <SidebarMenuSubItem key={subItem.title}>
-                      <SidebarMenuSubButton asChild>
-                        <a href={subItem.url}>
-                          <span>{subItem.title}</span>
-                        </a>
-                      </SidebarMenuSubButton>
-                    </SidebarMenuSubItem>
-                  ))}
+                  {item.items?.map((subItem) => {
+                    // 2. Lógica de Desabilitação
+                    const isDisabled = subItem.isDisabled;
+                    const disabledClasses = isDisabled
+                      ? "opacity-50 hover:bg-transparent hover:text-current" // Estilos de desabilitado
+                      : "";
+
+                    return (
+                      <SidebarMenuSubItem key={subItem.title}>
+                        {/* 3. Adiciona a classe de desabilitado ao botão/contêiner */}
+                        <SidebarMenuSubButton className={disabledClasses} asChild>
+                          {/* 4. Renderização Condicional: Usa Link do Next.js se não estiver desabilitado */}
+                          {isDisabled ? (
+                            <span title="Em breve">{subItem.title}</span>
+                          ) : (
+                            <Link href={subItem.url}>
+                              <span>{subItem.title}</span>
+                            </Link>
+                          )}
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    );
+                  })}
                 </SidebarMenuSub>
               </CollapsibleContent>
             </SidebarMenuItem>

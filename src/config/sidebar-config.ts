@@ -21,10 +21,12 @@ export const data = {
         {
           title: "Calculadora de Juros", // Ideia para o futuro
           url: "#",
+          isDisabled: true,
         },
         {
           title: "Salário Líquido", // Ideia para o futuro
           url: "#",
+          isDisabled: true,
         },
       ],
     },
@@ -36,14 +38,17 @@ export const data = {
         {
           title: "Comprimir PDF",
           url: "#",
+          isDisabled: true,
         },
         {
           title: "PDF para Word",
           url: "#",
+          isDisabled: true,
         },
         {
           title: "Unir PDFs (Merge)",
           url: "#",
+          isDisabled: true,
         },
       ],
     },
@@ -55,14 +60,17 @@ export const data = {
         {
           title: "Converter para JPG/PNG",
           url: "#",
+          isDisabled: true,
         },
         {
           title: "Comprimir Imagem",
           url: "#",
+          isDisabled: true,
         },
         {
           title: "Redimensionar",
           url: "#",
+          isDisabled: true,
         },
       ],
     },
@@ -74,14 +82,17 @@ export const data = {
         {
           title: "Gerador de Paletas",
           url: "#",
+          isDisabled: true,
         },
         {
           title: "Contrast Checker",
           url: "#",
+          isDisabled: true,
         },
         {
           title: "Gradientes CSS",
           url: "#",
+          isDisabled: true,
         },
       ],
     },
@@ -93,14 +104,17 @@ export const data = {
         {
           title: "Gerador de QR Code",
           url: "#",
+          isDisabled: true,
         },
         {
           title: "Gerador de Senhas",
           url: "#",
+          isDisabled: true,
         },
         {
           title: "Contador de Caracteres",
           url: "#",
+          isDisabled: true,
         },
       ],
     },
