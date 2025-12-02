@@ -1,6 +1,7 @@
 import { AdBanner } from '@/components/global/google/ad-banner';
 import CurrencyConverter from '@/components/pages/tools/currency-converter';
 import { Metadata } from 'next';
+import contentData from '@/config/currency_converter_content.json';
 
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export const metadata: Metadata = {
 };
 
 export default function ToolsPage() {
+  const pageContent = contentData.currencyConverterPage;
   return (
 
     <div className="mx-auto container p-8">
@@ -51,13 +53,38 @@ export default function ToolsPage() {
         <CurrencyConverter />
       </div>
 
+      <section className="my-12 max-w-4xl">
+        {pageContent.supportSections.map(section => (
+          <div key={section.id} className="mb-10">
+            <h3 className="text-2xl font-semibold mb-4 border-b pb-2">
+              {section.title}
+            </h3>
+
+            {/* Renderiza Parágrafos */}
+            {section.paragraphs && section.paragraphs.map((p, index) => (
+              <p key={index} className="text-muted-foreground mb-4">
+                {p}
+              </p>
+            ))}
+
+            {/* Renderiza FAQs (se a seção for a de FAQ) */}
+            {section.faqs && (
+              <div className="space-y-4">
+                {section.faqs.map((faq, index) => (
+                  <div key={index} className="p-4 border rounded-lg">
+                    <h4 className="font-medium">{faq.question}</h4>
+                    <p className="text-sm text-muted-foreground mt-1">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </section>
+
       {/* ÁREA DE ANÚNCIO */}
 
       <div className="my-8 flex flex-col items-start">
-        <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">
-          Publicidade
-        </p>
-
         <div className="w-full max-w-[728px]">
           <AdBanner
             dataAdSlot="1597748894"

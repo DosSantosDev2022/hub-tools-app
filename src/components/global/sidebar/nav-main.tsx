@@ -63,7 +63,7 @@ export function NavMain({
                     // 2. Lógica de Desabilitação
                     const isDisabled = subItem.isDisabled;
                     const disabledClasses = isDisabled
-                      ? "opacity-50 hover:bg-transparent hover:text-current" // Estilos de desabilitado
+                      ? "opacity-50 hover:bg-transparent hover:text-current hidden" // Estilos de desabilitado
                       : "";
 
                     return (

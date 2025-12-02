@@ -1,0 +1,42 @@
+{
+  "currencyConverterPage": {
+    "title": "Conversor de Moedas",
+    "description": "Bem-vindo à ferramenta de moedas e taxas de câmbio mais confiável do mundo. Converta valores em tempo real utilizando dados do mercado financeiro.",
+    
+    "supportSections": [
+      {
+        "id": "understand-quotation",
+        "title": "Entenda a Cotação das Moedas Hoje",
+        "paragraphs": [
+          "A cotação de moedas estrangeiras, como o Dólar, Euro ou Libra, é um fator crucial que afeta desde o preço de produtos importados até o planejamento de viagens. Nossa ferramenta utiliza dados em tempo real para garantir a precisão de sua conversão.",
+          "O valor de câmbio flutua a todo momento com base em diversos fatores econômicos: taxa de juros do país, inflação, balança comercial e eventos geopolíticos. Por isso, a taxa que você vê agora (taxa de mercado) pode ser ligeiramente diferente da taxa de câmbio turismo ou da taxa comercial usada em grandes transações.",
+          "A principal moeda de referência global é o Dólar Americano (USD). O real brasileiro (BRL) costuma reagir diretamente às políticas econômicas do Brasil e à demanda internacional por commodities."
+        ]
+      },
+      {
+        "id": "faq",
+        "title": "Perguntas Frequentes (FAQ) sobre Conversão de Moedas",
+        "faqs": [
+          {
+            "question": "O que é a taxa de câmbio comercial e a taxa de câmbio turismo?",
+            "answer": "A taxa comercial é usada em grandes operações entre bancos e empresas. A taxa turismo é a usada para compra de papel moeda em casas de câmbio, sendo sempre um pouco mais alta para cobrir custos operacionais e impostos. Nossa ferramenta exibe a taxa de mercado (comercial)."
+          },
+          {
+            "question": "Os dados são realmente em tempo real?",
+            "answer": "Sim. A atualização dos dados é feita a cada minuto (ou a frequência que sua API usa) para refletir o valor de mercado mais recente. É importante sempre verificar a hora da última atualização dos dados na ferramenta."
+          },
+          {
+            "question": "Por que a cotação muda tanto?",
+            "answer": "As mudanças são causadas pela lei da oferta e demanda no mercado financeiro global. Fatores como a política monetária de grandes economias, crises políticas e o preço do petróleo têm um impacto direto e imediato na taxa de câmbio."
+          }
+        ]
+      }
+    ],
+    
+    "callToAction": "Use nosso conversor agora e acompanhe a economia global!",
+    
+    "seoTips": {
+        "sourceDisclaimer": "Lembre-se de substituir '[Mencione a fonte dos seus dados...]' pela fonte real dos dados da cotação para aumentar a credibilidade e transparência, elementos valorizados pelo Google."
+    }
+  }
+}
